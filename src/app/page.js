@@ -19,7 +19,6 @@ export default function Home({ searchParams }) {
 }
 
 async function ProductListContainer({ searchParams }) {
-  const category = await searchParams;
-  console.log(category);
+  const { category } = await searchParams;
   return <List category={category} />;
 }

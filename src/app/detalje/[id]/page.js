@@ -26,11 +26,11 @@ async function FetchProduct({ params }) {
       <div className="mb-4 flex justify-between">
         <Link
           href="/"
-          className="flex items-center space-x-2 rounded-full bg-gray-200 p-1 text-gray-700 hover:text-gray-800"
+          className="flex items-center text-black hover:text-gray-800"
         >
           <IoArrowBack className="h-8 w-8" />
         </Link>
-        <FaRegStar className="align h-8 w-8 cursor-pointer rounded-full bg-gray-300 p-1 text-white" />
+        <FaRegStar className="align h-8 w-8 cursor-pointer rounded-full p-1 text-black" />
       </div>
 
       <div className="mb-4"></div>
@@ -45,19 +45,19 @@ async function FetchProduct({ params }) {
           className="w-full rounded-lg bg-pink-100"
         />
       </div>
-      <div className="mb-4">
-        <h1 className="text-2xl font-bold">{product.title}</h1>
-        <div className="flex space-x-2 p-2">
-          <p className="rounded-full bg-blue-400 text-gray-700">
+      <div className="mb-6">
+        <h1 className="mb-2 text-2xl font-bold">{product.title}</h1>
+        <div className="flex flex-wrap gap-2">
+          <span className="inline-flex items-center rounded-full bg-blue-300 p-2 text-gray-700">
             {product.brand}
-          </p>
-          <p className="rounded-full bg-yellow-300 text-gray-700">
+          </span>
+          <p className="rounded-full bg-yellow-300 p-2 text-gray-700">
             ${product.price}
           </p>
-          <p className="rounded-full bg-pink-400 text-gray-700">
+          <p className="rounded-full bg-pink-300 p-2 text-gray-700">
             {product.stock}
           </p>
-          <p className="rounded-full bg-indigo-400 text-gray-700">
+          <p className="rounded-full bg-indigo-300 p-2 text-gray-700">
             {product.tags}
           </p>
         </div>
