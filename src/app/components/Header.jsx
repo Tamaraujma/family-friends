@@ -8,8 +8,7 @@ const Header = () => {
           FamilyFriends
         </h1>
         <div className="relative">
-          <MdOutlineNotificationsNone className="h-6 w-6 text-gray-700" />
-          <div className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-red-300"></div>
+          <MdOutlineNotificationsNone className="h-6 w-6 text-gray-900" />
         </div>
       </div>
     </div>

@@ -1,16 +1,25 @@
-import Image from "next/image";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Button from "./components/Button";
 import List from "./components/listview/List";
+import CategoryList from "./components/CategoryList";
+import { Suspense } from "react";
 
-export default function Home() {
+export default function Home({ searchParams }) {
   return (
-    <div>
+    <div className="bg-red-50">
       <Header />
-      <Button />
+      <CategoryList />
+      <Suspense>
+        <ProductListContainer searchParams={searchParams} />
+      </Suspense>
       <List />
       <Footer />
     </div>
   );
+}
+
+async function ProductListContainer({ searchParams }) {
+  const category = await searchParams;
+  console.log(category);
+  return <List category={category} />;
 }

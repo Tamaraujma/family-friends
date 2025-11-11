@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = ({ firstName, breed, age, image, slug }) => {
+const Card = ({ title, desription, image, slug, brand }) => {
   return (
     <Link href={`/detalje/${slug}`}>
       <div className="overflow-hidden rounded-lg bg-white shadow">
         <div className="relative h-30 w-full">
           <Image
             loading="eager"
-            alt={firstName}
+            alt={title}
             src={image}
             width={300}
             height={200}
@@ -18,12 +18,14 @@ const Card = ({ firstName, breed, age, image, slug }) => {
         <div className="p-3 text-sm font-semibold">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-sm">{firstName}</h2>
-              <p className="text-gray-400">{breed}</p>
+              <h2 className="text-sm">{title}</h2>
+              <p className="text-gray-600">{brand}</p>
+              <p className="font-bold">{price}</p>
+              <p className="">{desription}</p>
             </div>
 
             <div className="text-right text-gray-400">
-              <span>{age}</span>
+              <span></span>
             </div>
           </div>
         </div>
