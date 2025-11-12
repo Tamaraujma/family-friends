@@ -49,7 +49,7 @@ async function FetchProduct({ params }) {
         <h1 className="mb-2 text-2xl font-bold">{product.title}</h1>
         <div className="flex flex-wrap gap-2">
           <span className="inline-flex items-center rounded-full bg-blue-300 p-2 text-gray-700">
-            {product.brand}
+            {product.brand ?? "Norand"}
           </span>
           <p className="rounded-full bg-yellow-300 p-2 text-gray-700">
             ${product.price}
@@ -66,7 +66,7 @@ async function FetchProduct({ params }) {
       <div>
         <h2 className="mb-2 font-semibold">Description</h2>
         <p className="text-gray-700">{product.description}</p>
-        <button className="mt-4 w-full space-x-2 rounded-full bg-red-200 p-4 font-bold text-white">
+        <button className="mt-4 w-full cursor-pointer space-x-2 rounded-full bg-pink-300 p-4 font-bold text-white">
           Buy Now
         </button>
       </div>

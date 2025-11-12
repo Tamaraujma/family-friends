@@ -6,7 +6,7 @@ const CategoryElement = ({ category }) => {
   return (
     <button
       onClick={() => router.push(`?category=${category}`)}
-      className="flex cursor-pointer items-center space-x-3 rounded-full border border-gray-300 bg-white px-4 py-3 hover:bg-red-300"
+      className="cursor-pointer rounded-full border border-gray-300 bg-white px-2 py-1 whitespace-nowrap hover:bg-red-300"
     >
       <span className="font-medium">{category}</span>
     </button>

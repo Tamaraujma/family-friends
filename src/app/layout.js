@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="max-width<400px>"></div>
+        <div className=""></div>
         {children}
       </body>
     </html>

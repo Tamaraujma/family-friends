@@ -16,6 +16,7 @@ const FetchCategories = async () => {
 
   return (
     <div className="flex space-x-3 overflow-x-auto px-4 pb-2">
+      <CategoryElement category="All" key="all" />
       {categories.map((category, index) => (
         <CategoryElement category={category} key={index} />
       ))}
